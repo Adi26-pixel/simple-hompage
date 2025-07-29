@@ -4,8 +4,172 @@
   box-sizing: border-box;
 }
 
-.author-info {
+body {
+  background: #f2f9fe;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 16px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-menu {
+  display: none;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+}
+
+.sidebar-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+  list-style: none;
+}
+
+.sidebar-menu a {
+  font-size: 28px;
+  text-decoration: none;
+  color: #909193;
+  font-weight: 600;
+}
+
+.sidebar-menu a.active {
+  color: #263fa9;
+  border-bottom: 3px solid #263fa9;
+}
+
+.toggle-btn button {
+  width: 100%;
+  background: #223344;
+  cursor: pointer;
+  border-radius: 40px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.close-button {
+  float: right;
+}
+
+.sun-fill {
+  background: #fff;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: none;
+}
+
+main {
+  margin-top: 32px;
+}
+
+main .hero-image {
+  display: block;
+  margin: 0 auto;
+  width: 278px;
+  height: 258px;
+}
+
+.text-container {
+  margin-top: 32px;
+}
+
+.headline-text {
   font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1%;
+  color: #223344;
+}
+
+.main-text-area {
+  margin-top: 12px;
+}
+
+.main-text {
+  font-size: 40px;
+  font-weight: 700;
+  color: #223344;
+  letter-spacing: -1%;
+}
+
+.main-text-area p {
+  margin-top: 32px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #677489;
+}
+
+.btn-section {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background: #263fa9;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.underline-btn {
+  margin-left: 32px;
+  text-decoration: none;
+  color: #263fa9;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 3px solid #263fa9;
+}
+
+.credit-section {
+  margin-top: 40px;
+  display: flex;
+  color: #677489;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.tick-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.credit,
+.install {
+  display: flex;
+}
+
+.credit {
+  margin-right: 20px;
+}
+
+.author-info {
+  font-size: 10px;
   text-align: center;
   margin-top: 16px;
   color: rgb(55, 65, 81);
