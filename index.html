@@ -18,106 +18,275 @@
       rel="stylesheet"
     />
 
+    <script
+      src="https://kit.fontawesome.com/d139762293.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Simple Homepage - Alarado</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="sidebar-menu">
-      <div class="sidebar">
-        <img src="resources/close-button.svg" alt="" class="close-button" />
-        <ul class="sidebar-nav-links">
-          <li><a href="#" class="active">About us</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Resource</a></li>
-          <li><a href="#">Conatct</a></li>
-          <li>
-            <div class="toggle-btn">
-              <button>
-                <img
-                  src="resources/Moon_fill_light.svg"
-                  alt=""
-                  class="moon-fill-light"
+    <nav class="navbar">
+      <img src="resources/logo-light.svg" alt="" class="logo" id="logo" />
+
+      <div class="nav-links">
+        <ul class="nav-list">
+          <li class="noShowMoblie"><a href="#" class="active">About us</a></li>
+          <li class="noShowMoblie"><a href="#">Product</a></li>
+          <li class="noShowMoblie"><a href="#">Resource</a></li>
+          <li class="noShowMoblie"><a href="#">Contact</a></li>
+          <div class="toggle-btn noShowMoblie">
+            <button onclick="toggleBtn()">
+              <svg
+                id="moon"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="moonPath"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"
+                  fill="#F2F9FE"
                 />
-                <img src="resources/Sun_fill.svg" alt="" class="sun-fill" />
-              </button>
-            </div>
-          </li>
+              </svg>
+              <svg
+                id="sun"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle id="sunCircle" cx="12" cy="12" r="4" fill="#223344" />
+                <path
+                  class="sunPath"
+                  d="M12 5V3"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M12 21V19"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M16.95 7.04996L18.3643 5.63574"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M5.63608 18.3644L7.05029 16.9502"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M19 12L21 12"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M3 12L5 12"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M16.95 16.95L18.3643 18.3643"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M5.63608 5.63559L7.05029 7.0498"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
         </ul>
       </div>
+    </nav>
+    <main class="container">
+      <img
+        src="resources/hero-image-simple-homepage.png"
+        alt="mobile image"
+        class="hero-image"
+      />
+      <div class="text-container">
+        <h3 class="headline-text">😎 Simple way to communicate</h3>
+        <div class="main-text-area">
+          <h1 class="main-text">Actions for Accessibility in Design</h1>
+          <p>
+            The fastest way to build and deploy websites with resusable
+            components.
+          </p>
+        </div>
+
+        <div class="btn-section">
+          <a href="#" class="btn">Get Started</a>
+          <a href="#" class="underline-btn">Get live demo</a>
+        </div>
+        <div class="credit-section">
+          <div class="credit">
+            <img
+              src="resources/Done_ring_round_fill.svg"
+              alt=""
+              class="tick-icon"
+            />
+            <p class="credit-text">No credit card required</p>
+          </div>
+          <div class="install">
+            <img
+              src="resources/Done_ring_round_fill.svg"
+              alt=""
+              class="tick-icon"
+            />
+            <p class="install-text">No software to install</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="side-menu-bar">
+      <a onclick="closeBtn()" href="#" class="close-btn">
+        <i id="closeBtn" class="fa-solid fa-xmark"></i>
+      </a>
+      <ul class="side-menu">
+        <li><a href="#" class="active">About us</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Resource</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <div class="toggle-btn">
+            <button onclick="toggleBtn()">
+              <svg
+                id="moon"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="moonPath"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"
+                  fill="#F2F9FE"
+                />
+              </svg>
+              <svg
+                id="sun"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle id="sunCircle" cx="12" cy="12" r="4" fill="#223344" />
+                <path
+                  class="sunPath"
+                  d="M12 5V3"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M12 21V19"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M16.95 7.04996L18.3643 5.63574"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M5.63608 18.3644L7.05029 16.9502"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M19 12L21 12"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M3 12L5 12"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M16.95 16.95L18.3643 18.3643"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="sunPath"
+                  d="M5.63608 5.63559L7.05029 7.0498"
+                  stroke="#223344"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="container">
-      <header class="navbar">
-        <div class="logo">
-          <img src="resources/logo-light.svg" alt="logo light" />
-        </div>
-
-        <div class="nav-menu">
-          <ul class="nav-links">
-            <li><a href="#" class="active">About us</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Resource</a></li>
-            <li><a href="#">Conatct</a></li>
-          </ul>
-        </div>
-
-        <div class="hamburger">
-          <img src="resources/hamburger-button.svg" alt="hamburger button" />
-        </div>
-      </header>
-      <main>
-        <img
-          src="resources/hero-image-simple-homepage@2x.png"
-          alt="mobile image"
-          class="hero-image"
+    <a onclick="showMenuIcon()" class="menu-icon" href="#">
+      <svg
+        id="showMenuIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        height="32px"
+        viewBox="0 -960 960 960"
+        width="32px"
+        fill="#333"
+      >
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
         />
-        <div class="text-container">
-          <h3 class="headline-text">😎 Simple way to communicate</h3>
-          <div class="main-text-area">
-            <h1 class="main-text">
-              Actions for <br />
-              Accessibility <br />
-              in Design
-            </h1>
-            <p>
-              The fastest way to build and deploy websites with resusable
-              components.
-            </p>
-          </div>
+      </svg>
+    </a>
 
-          <div class="btn-section">
-            <a href="#" class="btn">Get Started</a>
-            <a href="#" class="underline-btn">Get live demo</a>
-          </div>
-          <div class="credit-section">
-            <div class="credit">
-              <img
-                src="resources/Done_ring_round_fill.svg"
-                alt=""
-                class="tick-icon"
-              />
-              <p class="credit-text">No credit card required</p>
-            </div>
-            <div class="install">
-              <img
-                src="resources/Done_ring_round_fill.svg"
-                alt=""
-                class="tick-icon"
-              />
-              <p class="install-text">No software to install</p>
-            </div>
-          </div>
-        </div>
-      </main>
+    <footer class="author-info">
+      Coded by <a href="#">Adeline Monsengo</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </footer>
 
-      <footer class="author-info">
-        Coded by <a href="#">Adeline Monsengo</a> | Challenge by
-        <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-          >devChallenges.io</a
-        >.
-      </footer>
-
-      <script src="index.js"></script>
-    </div>
+    <script src="index.js"></script>
   </body>
 </html>
